@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mondrian Project</title>
+  <style>
+    /* 
+    Write your CSS here 
+    Gap Colour: #000
+    White: #F0F1EC
+    Red: #E72F24
+    Black: #232629
+    Blue: #004592
+    Yellow: #F9D01E
+
+    For dimensions, see dimensions.png image.
+    HINT: Remember you can't change the properties of grid lines.
+    But grid lines are transparent!
+    */
+    .container {
+      width: 1728px;
+      height: 1080px;
+      padding: 23px 27px;
+      box-sizing: border-box;
+      background-color:#40454b;
+      display: grid;
+      gap: 13px;
+      grid-template-columns: repeat(80, 8px);
+      grid-template-rows: repeat(10, 92px);
+      grid-auto-flow: dense;
+    }
+    .white {
+      background-color: #ffffff;
+    }
+    .red {
+      background-color: #E72F24;
+    }
+    .blue {
+      background-color: #004592;
+    }
+    .black {
+      background-color: #232629;
+    }
+    .yellow {
+      background-color: #F9D01E;
+    }
+
+    /* Row one */
+    .one        { grid-area: auto / auto / span 1 / span 10; } /* white  */
+    .two        { grid-area: auto / auto / span 1 / span 16; } /* white  */
+    .twentyfive { grid-area: auto / auto / span 1 / span 14; } /* yellow */
+    .fortytwo   { grid-area: auto / auto / span 2 / span 14; } /* blue   */
+    .twentysix  { grid-area: auto / auto / span 1 / span 5;  } /* yellow */
+    .thirtythree{ grid-area: auto / auto / span 1 / span 5;  } /* black  */
+    .three      { grid-area: auto / auto / span 1 / span 16; } /* white  */
+
+    /* Row two */
+    .four       { grid-area: auto / auto / span 2 / span 6;  } /* white  */
+    .thirtynine { grid-area: auto / auto / span 4 / span 20; } /* red    */
+    .twentyseven{ grid-area: auto / auto / span 2 / span 14; } /* yellow */
+    .twentyeight{ grid-area: auto / auto / span 1 / span 10; } /* yellow */
+    .five       { grid-area: auto / auto / span 2 / span 10; } /* white  */
+    .twentynine { grid-area: auto / auto / span 3 / span 6;  } /* yellow */
+
+    /* Row three */
+    .forty      { grid-area: auto / auto / span 2 / span 14; } /* red    */
+    .thirtyfour { grid-area: auto / auto / span 1 / span 10; } /* black  */
+
+    /* Row four */
+    .six        { grid-area: auto / auto / span 3 / span 6;  } /* white  */
+    .seven      { grid-area: auto / auto / span 2 / span 7;  } /* white  */
+    .eight      { grid-area: auto / auto / span 2 / span 7;  } /* white  */
+    .nine       { grid-area: auto / auto / span 1 / span 10; } /* white  */
+    .thirtyfive { grid-area: auto / auto / span 2 / span 10; } /* black  */
+
+    /* Row five */
+    .ten        { grid-area: auto / auto / span 1 / span 14; } /* white  */
+    .eleven     { grid-area: auto / auto / span 1 / span 10; } /* white  */
+    .twelve     { grid-area: auto / auto / span 3 / span 6;  } /* white  */
+
+    /* Row six */
+    .thirtysix  { grid-area: auto / auto / span 2 / span 10; } /* black  */
+    .thirteen   { grid-area: auto / auto / span 1 / span 10; } /* white  */
+    .fourteen   { grid-area: auto / auto / span 1 / span 14; } /* white  */
+    .fifteen    { grid-area: auto / auto / span 2 / span 7;  } /* white  */
+    .sixteen    { grid-area: auto / auto / span 2 / span 7;  } /* white  */
+    .fortythree { grid-area: auto / auto / span 4 / span 20; } /* blue   */
+
+    /* Row seven */
+    .thirty     { grid-area: auto / auto / span 3 / span 6;  } /* yellow */
+    .seventeen  { grid-area: auto / auto / span 1 / span 10; } /* white  */
+    .fortyfour  { grid-area: auto / auto / span 2 / span 14; } /* blue   */
+
+    /* Row eight */
+    .eighteen   { grid-area: auto / auto / span 2 / span 10; } /* white  */
+    .thirtyseven{ grid-area: auto / auto / span 1 / span 10; } /* black  */
+    .thirtyone  { grid-area: auto / auto / span 2 / span 14; } /* yellow */
+    .nineteen   { grid-area: auto / auto / span 2 / span 6;  } /* white  */
+
+    /* Row nine */
+    .thirtytwo  { grid-area: auto / auto / span 2 / span 5;  } /* yellow */
+    .twenty     { grid-area: auto / auto / span 2 / span 5;  } /* white  */
+    .fortyone   { grid-area: auto / auto / span 2 / span 14; } /* red    */
+
+    /* Row ten */
+    .twentyone  { grid-area: auto / auto / span 1 / span 16; } /* white  */
+    .twentytwo  { grid-area: auto / auto / span 1 / span 7;  } /* white  */
+    .thirtyeight{ grid-area: auto / auto / span 1 / span 7;  } /* black  */
+    .twentythree{ grid-area: auto / auto / span 1 / span 16; } /* white  */
+    .twentyfour { grid-area: auto / auto / span 1 / span 10; } /* white  */
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="white one"></div>
+    <div class="white two"></div>
+    <div class="yellow twentyfive"></div>
+    <div class="blue fortytwo"></div>
+    <div class="yellow twentysix"></div>
+    <div class="black thirtythree"></div>
+    <div class="white three"></div>
+
+    <div class="white four"></div>
+    <div class="red thirtynine"></div>
+    <div class="yellow twentyseven"></div>
+    <div class="yellow twentyeight"></div>
+    <div class="white five"></div>
+    <div class="yellow twentynine"></div>
+
+    <div class="red forty"></div>
+    <div class="black thirtyfour"></div>
+
+    <div class="white six"></div>
+    <div class="white seven"></div>
+    <div class="white eight"></div>
+    <div class="white nine"></div>
+    <div class="black thirtyfive"></div>
+
+    <div class="white ten"></div>
+    <div class="white eleven"></div>
+    <div class="white twelve"></div>
+
+    <div class="black thirtysix"></div>
+    <div class="white thirteen"></div>
+    <div class="white fourteen"></div>
+    <div class="white fifteen"></div>
+    <div class="white sixteen"></div>
+    <div class="blue fortythree"></div>
+
+    <div class="yellow thirty"></div>
+    <div class="white seventeen"></div>
+    <div class="blue fortyfour"></div>
+
+    <div class="white eighteen"></div>
+    <div class="black thirtyseven"></div>
+    <div class="yellow thirtyone"></div>
+    <div class="white nineteen"></div>
+
+    <div class="yellow thirtytwo"></div>
+    <div class="white twenty"></div>
+    <div class="red fortyone"></div>
+
+    <div class="white twentyone"></div>
+    <div class="white twentytwo"></div>
+    <div class="black thirtyeight"></div>
+    <div class="white twentythree"></div>
+    <div class="white twentyfour"></div>
+  </div>
+</body>
+</html>
